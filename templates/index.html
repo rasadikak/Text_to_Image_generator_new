@@ -55,17 +55,42 @@
 <body>
     <div class="container">
         <h2>AI Text to Image Generator</h2>
-        <form action="/" method="post">
-        <textarea placeholder="Enter text to generate image" name="prompt" ></textarea>
+        <form action="/" method="post" id="imgForm">
+        <textarea placeholder="Enter text to generate image" name="prompt" required></textarea>
         <br>
         <input type="submit" value="Generate Image" class="button">
     </form>
+
+    <div id="result" class="result">
     {% if image_url %}
     <h4>The Generatod Image for the prompt "{{prompt}}"</h4>
     <img src="{{image_url}}" alt="image" width="500px" height="500px" style="display: block; margin: auto; justify-content: center;" >
     {% elif error_msg %}
     <p  style="color:red">{{error_msg}}</p>
     {%endif%}
+
     </div>
+    </div>
+
+    <script>
+
+        
+    window.addEventListener("load", function(){
+        if(sessionStorage.getItem("submitted")){
+            // came from form submit — show result
+            sessionStorage.removeItem("submitted");
+        } else {
+            // user refreshed — hide result and reset form
+            document.querySelector(".result").style.display = "none";
+            document.getElementById("imgForm").reset();
+        }
+    });
+
+    document.getElementById("imgForm").addEventListener("submit", function(){
+        sessionStorage.setItem("submitted", "true");
+    });
+</script>
+
+
 </body>
 </html>
