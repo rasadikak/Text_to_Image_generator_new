@@ -57,7 +57,7 @@ HF_TOKEN=your_huggingface_api_key
 uvicorn main:app --reload  
 
 Open in browser:  
-http://127.0.0.1:8000  
+http://127.0.0.1:5000  
 
 ---
 
