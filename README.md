@@ -64,7 +64,7 @@ http://127.0.0.1:5000
 
 ## 🌐 Live Demo
 
- [kaushani.pythonanywhere.com]( kaushani.pythonanywhere.com )
+ [http://kaushani.pythonanywhere.com/](http://kaushani.pythonanywhere.com/)
 
 ---
 
