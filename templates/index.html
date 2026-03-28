@@ -50,6 +50,55 @@
         .button:hover {
             background-color: #333;
         }
+
+        /* Tablet */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 16px;
+    }
+
+    img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start;  /* stops content being cut on small screens */
+        padding: 20px 0;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .container {
+        width: 95%;
+        padding: 16px;
+        border-radius: 8px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    textarea {
+        font-size: 14px;
+        height: 70px;
+    }
+
+    .button {
+        width: 100%;    /* full width button on mobile */
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    img {
+        width: 100% !important;
+        height: auto !important;  /* maintains aspect ratio */
+    }
+}
     </style>
 </head>
 <body>
